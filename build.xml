@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jackut" default="compile" basedir=".">
+    <property name="src.dir" value="."/>
+    <property name="build.dir" value="bin"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete file="jackut.dat"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.dir}"/>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" encoding="UTF-8">
+            <classpath>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <include name="Jackut/**/*.java"/>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="Jackut.Main" classpath="${build.dir}" fork="true"/>
+    </target>
+
+    <target name="test" depends="compile">
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us1_1.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us1_2.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us2_1.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us2_2.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us3_1.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us3_2.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us4_1.txt"/>
+        </java>
+        <java classname="easyaccept.EasyAccept" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+            <arg value="Jackut.Facade"/>
+            <arg value="tests/us4_2.txt"/>
+        </java>
+    </target>
+</project>
