@@ -2,9 +2,6 @@ package Jackut;
 
 import easyaccept.EasyAccept;
 
-/**
- * Executa os testes de aceitacao do Jackut via EasyAccept.
- */
 public class Main {
     public static void main(String[] args) {
         String[] args2 = {"Jackut.Facade",

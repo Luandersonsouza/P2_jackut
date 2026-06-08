@@ -19,7 +19,12 @@
     </target>
 
     <target name="run" depends="compile">
-        <java classname="Jackut.Main" classpath="${build.dir}" fork="true"/>
+        <java classname="Jackut.Main" fork="true">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="lib/easyaccept.jar"/>
+            </classpath>
+        </java>
     </target>
 
     <target name="test" depends="compile">

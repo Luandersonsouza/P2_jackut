@@ -2,9 +2,6 @@ package Jackut.services;
 
 import Jackut.exceptions.JackutException;
 
-/**
- * Validacoes comuns usadas pelos servicos.
- */
 public class Validador {
     private Validador() {
     }

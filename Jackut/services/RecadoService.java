@@ -4,9 +4,6 @@ import Jackut.exceptions.JackutException;
 import Jackut.models.Recado;
 import Jackut.models.Usuario;
 
-/**
- * Servico de envio e leitura de recados.
- */
 public class RecadoService {
     private Database db = Database.getInstance();
 

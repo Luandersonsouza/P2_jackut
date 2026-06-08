@@ -9,9 +9,6 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
-/**
- * Representa uma conta do Jackut.
- */
 public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
 

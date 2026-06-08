@@ -11,9 +11,6 @@ import java.io.ObjectOutputStream;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * Banco de dados em memoria do Jackut, com persistencia simples em arquivo.
- */
 public class Database {
     private static Database instance;
 

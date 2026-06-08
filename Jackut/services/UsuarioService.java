@@ -3,9 +3,6 @@ package Jackut.services;
 import Jackut.exceptions.JackutException;
 import Jackut.models.Usuario;
 
-/**
- * Servico de usuarios, perfis e sessoes.
- */
 public class UsuarioService {
     private Database db = Database.getInstance();
 

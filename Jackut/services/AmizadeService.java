@@ -5,9 +5,6 @@ import Jackut.models.Usuario;
 
 import java.util.Iterator;
 
-/**
- * Servico responsavel pelos relacionamentos de amizade.
- */
 public class AmizadeService {
     private Database db = Database.getInstance();
 

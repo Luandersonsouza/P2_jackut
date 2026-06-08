@@ -5,11 +5,6 @@ import Jackut.services.Database;
 import Jackut.services.RecadoService;
 import Jackut.services.UsuarioService;
 
-/**
- * Fachada publica usada pelos testes de aceitacao.
- *
- * Esta classe apenas encaminha chamadas para os servicos do projeto.
- */
 public class Facade {
     private Database db = Database.getInstance();
     private UsuarioService usuarioService = new UsuarioService();
